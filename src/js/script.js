@@ -1,3 +1,8 @@
+const prompt = require("prompt-sync")();
+
+let name = prompt("Enter Name: ");
+let weeklyBudget = prompt("Enter Number: ")
+
 function calculateDaily(total) {
 return total / 7;
 }
@@ -11,9 +16,6 @@ function financialHealthStatus(dailyLimit) {
         return {status: "High budget", message: "Consider investing your surpluas"};
     }
 }
-
-const name = "Kreg";
-const weeklyBudget = 21000;
 
 const dailyLimit = calculateDaily(weeklyBudget);
 const health = financialHealthStatus(dailyLimit);
